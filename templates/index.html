@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ judul }}</title>
+</head>
+<body>
+    <h1>{{ judul }}</h1>
+
+    <form method="post">
+        <input type="number" name="angka1" step="any" required>
+        <input type="number" name="angka2" step="any" required>
+
+        <select name="operasi">
+            <option value="tambah">Tambah</option>
+            <option value="kurang">Kurang</option>
+            <option value="kali">Kali</option>
+            <option value="bagi">Bagi</option>
+        </select>
+
+        <button type="submit">Hitung</button>
+    </form>
+
+    {% if hasil is not none %}
+        <h2>Hasil: {{ hasil }}</h2>
+    {% endif %}
+</body>
+</html>
